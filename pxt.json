@@ -1,5 +1,5 @@
 {
-    "name": "main-map",
+    "name": "DisciplePlayer",
     "description": "",
     "dependencies": {
         "device": "*",
