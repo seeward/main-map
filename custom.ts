@@ -525,7 +525,7 @@ class Disciple {
         let newImgArray: Image[] = []
         switch(c){
             case Characters.Matthew: 
-                newBaseColor = 4
+                newBaseColor = 12
             break
             case Characters.John: 
                 newBaseColor = 8
