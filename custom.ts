@@ -31,7 +31,7 @@ namespace DisciplePlayer {
     //% inlineInputMode=inline
     //% blockSetVariable=disciple
     //% weight=100
-    export function create(k: number, x: number, y: number, c: Characters): Disciple {
+    export function create(k: number, x: number = 25, y: number = 25, c: Characters = 1): Disciple {
        _disciple = new Disciple(k,x,y,c);
        return _disciple
     }
@@ -65,26 +65,26 @@ class Disciple {
     private _player: Sprite = null; // hold our player
     private _character: Characters = null; // which Disciple
     private walkDown: Image[] = [img`
-    . . . . . f f f f . . . . .
-    . . . f f e e e e f f . . .
-    . . f e e e e e e e e f . .
-    . . f e e e e e e e e f . .
-    . f e d e e e e e e e e f .
-    . f d d d d e e e e e d f .
-    . f d d d f d d f d d d f .
-    . . f d d d d f d d d f . .
-    . . . f d d d f d d f . . .
-    . . f 2 f d d d d f 2 f . .
-    . f d 2 2 f f f f 2 2 d f .
-    f d d 2 2 2 2 2 2 2 2 d d f
-    f d d f 2 2 2 2 2 2 f d d f
-    f d d f 2 2 2 2 2 2 f d d f
-    . f f 8 f f f f f f 8 f f .
-    . . f 8 8 8 8 8 8 8 8 f . .
-    . . f 8 8 8 f f 8 8 8 f . .
-    . . f e e e f f e e e f . .
-    . . . f f f . . f f f . . .
-`,img`
+        . . . . . f f f f . . . . .
+        . . . f f e e e e f f . . .
+        . . f e e e e e e e e f . .
+        . . f e e e e e e e e f . .
+        . f e d e e e e e e e e f .
+        . f d d d d e e e e e d f .
+        . f d d d f d d f d d d f .
+        . . f d d d d f d d d f . .
+        . . . f d d d f d d f . . .
+        . . f 2 f d d d d f 2 f . .
+        . f d 2 2 f f f f 2 2 d f .
+        f d d 2 2 2 2 2 2 2 2 d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        . f f 8 f f f f f f 8 f f .
+        . . f 8 8 8 8 8 8 8 8 f . .
+        . . f 8 8 8 f f 8 8 8 f . .
+        . . f e e e f f e e e f . .
+        . . . f f f . . f f f . . .
+    `,img`
     . . . . . . . . . . . . . . 
     . . . . . f f f f . . . . . 
     . . . f f e e e e f f . . . 
