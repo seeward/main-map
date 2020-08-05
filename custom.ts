@@ -540,6 +540,11 @@ class Disciple {
         }
         imgs.forEach(function(value: Image, index: number) {
             value.replace(2, newBaseColor)
+            let i2 = 0;
+            for(let i = 0;i<14;i++){
+                console.log(value.getPixel(i, i2))
+                i2++
+            }
             newImgArray.push(value)
         })
         
