@@ -522,16 +522,20 @@ class Disciple {
 
     public changePlayerColor(imgs: Image[], c: Characters): Image[] {
         let newBaseColor: number = 1
+        let newHairColor: number = 14
         let newImgArray: Image[] = []
         switch(c){
             case Characters.Matthew: 
                 newBaseColor = 12
+                newHairColor = 15
             break
             case Characters.John: 
                 newBaseColor = 8
+                newHairColor = 5
             break
             case Characters.Mark: 
                 newBaseColor = 2
+
             break
             case Characters.Luke: 
                 newBaseColor = 9
@@ -540,11 +544,7 @@ class Disciple {
         }
         imgs.forEach(function(value: Image, index: number) {
             value.replace(2, newBaseColor)
-            let i2 = 0;
-            for(let i = 0;i<14;i++){
-                console.log(value.getPixel(i, i2))
-                i2++
-            }
+            value.replace(14, newHairColor)
             newImgArray.push(value)
         })
         
