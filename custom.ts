@@ -548,7 +548,7 @@ class Disciple {
     public walkRightAnimation(){
         animation.runImageAnimation(
         this._player,
-        this.walkRight,
+        this.changePlayerColor(this.walkRight, this._character),
         200,
         true
         )
@@ -556,7 +556,7 @@ class Disciple {
     public walkLeftAnimation(){
         animation.runImageAnimation(
         this._player,
-        this.walkLeft,
+        this.changePlayerColor(this.walkLeft, this._character),
         200,
         true
         )
@@ -564,7 +564,7 @@ class Disciple {
     public walkUpAnimation(){
         animation.runImageAnimation(
         this._player,
-        this.walkUp,
+        this.changePlayerColor(this.walkUp, this._character),
         200,
         true
         )
@@ -573,7 +573,7 @@ class Disciple {
     public walkDownAnimation(){
         animation.runImageAnimation(
         this._player,
-        this.walkDown,
+        this.changePlayerColor(this.walkDown, this._character),
         200,
         true
         )
@@ -581,7 +581,7 @@ class Disciple {
     public idleAnimation(){
         animation.runImageAnimation(
         this._player,
-        this.idle,
+        this.changePlayerColor(this.idle, this._character),
         200,
         true
         )
