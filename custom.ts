@@ -59,6 +59,7 @@ namespace DisciplePlayer {
         }
     }
 }
+
 //% blockNamespace=DisciplePlayer
 class Disciple {
 
@@ -510,14 +511,30 @@ class Disciple {
         . . . f f f . . f f f . . . 
         `]
     
+
     public constructor(k: number, x: number = 50, y: number = 50, c: Characters = 1) {
-        this._player = sprites.create(this.walkDown[0], k)
+        this._player = sprites.create(this.changePlayerColor(this.walkDown, Characters.Matthew)[0], k)
         this._player.setFlag(SpriteFlag.StayInScreen, true);
         this._character = c;
         this._player.x = x;
         this._player.y = y;
     }
 
+    public changePlayerColor(imgs: Image[], c: Characters): Image[] {
+        let newBaseColor: number = 1
+        let newImgArray: Image[] = []
+        switch(c){
+            case Characters.Matthew: 
+                newBaseColor = 4
+            
+        }
+        imgs.forEach(function(value: Image, index: number) {
+            value.replace(2, newBaseColor)
+            newImgArray.push(value)
+        })
+        
+        return newImgArray
+    }
     public walkRightAnimation(){
         animation.runImageAnimation(
         this._player,
