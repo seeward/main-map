@@ -56,13 +56,8 @@ namespace DisciplePlayer {
             case AnimationTypes.WalkRight:
                 _disciple.walkRightAnimation()
                 break
-            
-
         }
-
     }
-
-    
 }
 //% blockNamespace=DisciplePlayer
 class Disciple {
@@ -515,7 +510,7 @@ class Disciple {
         . . . f f f . . f f f . . . 
         `]
     
-    public constructor(k: number, x: number =50, y: number = 50, c: Characters = 1) {
+    public constructor(k: number, x: number = 50, y: number = 50, c: Characters = 1) {
         this._player = sprites.create(this.walkDown[0], k)
         this._player.setFlag(SpriteFlag.StayInScreen, true);
         this._character = c;
@@ -525,44 +520,44 @@ class Disciple {
 
     public walkRightAnimation(){
         animation.runImageAnimation(
-    this._player,
-    this.walkRight,
-    200,
-    true
-    )
+        this._player,
+        this.walkRight,
+        200,
+        true
+        )
     }
     public walkLeftAnimation(){
         animation.runImageAnimation(
-    this._player,
-    this.walkLeft,
-    200,
-    true
-    )
+        this._player,
+        this.walkLeft,
+        200,
+        true
+        )
     }
     public walkUpAnimation(){
         animation.runImageAnimation(
-    this._player,
-    this.walkUp,
-    200,
-    true
-    )
+        this._player,
+        this.walkUp,
+        200,
+        true
+        )
     }
     
     public walkDownAnimation(){
         animation.runImageAnimation(
-    this._player,
-    this.walkDown,
-    200,
-    true
-    )
+        this._player,
+        this.walkDown,
+        200,
+        true
+        )
     }
-public idleAnimation(){
+    public idleAnimation(){
         animation.runImageAnimation(
-    this._player,
-    this.idle,
-    200,
-    true
-    )
+        this._player,
+        this.idle,
+        200,
+        true
+        )
     }
 
     //% blockId=jesusSprite block="%Disciple(disciple) sprite"
