@@ -513,7 +513,7 @@ class Disciple {
     
 
     public constructor(k: number, x: number = 50, y: number = 50, c: Characters = 1) {
-        this._player = sprites.create(this.changePlayerColor(this.walkDown, Characters.Matthew)[0], k)
+        this._player = sprites.create(this.changePlayerColor(this.walkDown, c)[0], k)
         this._player.setFlag(SpriteFlag.StayInScreen, true);
         this._character = c;
         this._player.x = x;
