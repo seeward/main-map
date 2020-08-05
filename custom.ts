@@ -86,25 +86,25 @@ class Disciple {
         . . f e e e f f e e e f . .
         . . . f f f . . f f f . . .
     `,img`
-    . . . . . . . . . . . . . . 
-    . . . . . f f f f . . . . . 
-    . . . f f e e e e f f . . . 
-    . . f e e e e e e e e f . . 
-    . . f e e e e e e e e f . . 
-    . f e d e e e e e e e e f . 
-    . 3 d d d d e e e e e d f . 
-    . f d d d f d d f d d d f . 
-    . . f d d d d f d d d f f . 
-    . . . f d d d f d d f d d f 
-    . f f 2 f d d d d f 2 2 d f 
-    . f d 2 2 f f f f 2 2 f f . 
-    . f d d 2 2 2 2 2 2 2 f . . 
-    . f d d 2 2 2 2 2 2 2 f . . 
-    . f f 8 f f f f f f 8 f . . 
-    . . f 8 8 8 f 8 8 8 8 f . . 
-    . . . f f f f f 8 8 8 f . . 
-    . . . . . . . f e e e f . . 
-    . . . . . . . . f f f . . . 
+        . . . . . . . . . . . . . .
+        . . . . . f f f f . . . . .
+        . . . f f e e e e f f . . .
+        . . f e e e e e e e e f . .
+        . . f e e e e e e e e f . .
+        . f e d e e e e e e e e f .
+        . f d d d d e e e e e d f .
+        . f d d d f d d f d d d f .
+        . . f d d d d f d d d f f .
+        . . . f d d d f d d f d d f
+        . f f 2 f d d d d f 2 2 d f
+        . f d 2 2 f f f f 2 2 f f .
+        . f d d 2 2 2 2 2 2 2 f . .
+        . f d d 2 2 2 2 2 2 2 f . .
+        . f f 8 f f f f f f 8 f . .
+        . . f 8 8 8 f 8 8 8 8 f . .
+        . . . f f f f f 8 8 8 f . .
+        . . . . . . . f e e e f . .
+        . . . . . . . . f f f . . .
     `,img`
     . . . . . f f f f . . . . . 
     . . . f f e e e e f f . . . 
