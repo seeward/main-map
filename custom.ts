@@ -526,6 +526,10 @@ class Disciple {
         switch(c){
             case Characters.Matthew: 
                 newBaseColor = 4
+            break
+            case Characters.John: 
+                newBaseColor = 8
+            break
             
         }
         imgs.forEach(function(value: Image, index: number) {
