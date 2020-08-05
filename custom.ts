@@ -535,7 +535,7 @@ class Disciple {
             break
             case Characters.Mark: 
                 newBaseColor = 2
-
+                newHairColor = 13
             break
             case Characters.Luke: 
                 newBaseColor = 9
