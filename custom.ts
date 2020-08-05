@@ -544,6 +544,7 @@ class Disciple {
         }
         imgs.forEach(function(value: Image, index: number) {
             value.replace(2, newBaseColor)
+            value.replace(8, newBaseColor)
             value.replace(14, newHairColor)
             newImgArray.push(value)
         })
