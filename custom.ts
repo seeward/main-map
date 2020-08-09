@@ -39,7 +39,7 @@ namespace DisciplePlayer {
     //% blockId=DiscipleAnimations block="Disciple Play %a Animation"
     //% a.shadow=animationTypes
     export function playAnimation(s: AnimationTypes) {
-
+        animation.stopAnimation(animation.AnimationTypes.All, _disciple.sprite)
         switch (s) {
             case AnimationTypes.Idle:
                 _disciple.idleAnimation();
@@ -65,6 +65,7 @@ class Disciple {
 
     private _player: Sprite = null; // hold our player
     private _character: Characters = null; // which Disciple
+    // animation image arrays
     private walkDown: Image[] = [img`
         . . . . . f f f f . . . . .
         . . . f f e e e e f f . . .
@@ -511,10 +512,8 @@ class Disciple {
         . . . f f f . . f f f . . . 
         `]
     
-
     public constructor(k: number, x: number = 50, y: number = 50, c: Characters = 1) {
         this._player = sprites.create(this.changePlayerColor(this.walkDown, c)[0], k)
-        this._player.setFlag(SpriteFlag.StayInScreen, true);
         this._character = c;
         this._player.x = x;
         this._player.y = y;
@@ -575,7 +574,6 @@ class Disciple {
         true
         )
     }
-    
     public walkDownAnimation(){
         animation.runImageAnimation(
         this._player,
