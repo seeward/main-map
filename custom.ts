@@ -521,6 +521,8 @@ class Disciple {
     }
 
     public changePlayerColor(imgs: Image[], c: Characters): Image[] {
+console.log(c)        
+
         let newBaseColor: number = 1
         let newHairColor: number = 14
         let newImgArray: Image[] = []
@@ -542,6 +544,8 @@ class Disciple {
             break
             
         }
+
+        console.log(`${newBaseColor}  - ${newHairColor}` ) 
         imgs.forEach(function(value: Image, index: number) {
             value.replace(2, newBaseColor)
             value.replace(8, newBaseColor)
@@ -584,7 +588,7 @@ class Disciple {
         )
     }
     public idleAnimation(){
-        console.log(this._character)
+        
         animation.runImageAnimation(
         this._player,
         this.changePlayerColor(this.idle, this._character),
