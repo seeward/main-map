@@ -26,7 +26,7 @@ namespace DisciplePlayer {
     
     let _disciple : Disciple = null;
     
-    //% blockId=playerCreate block="sprite of kind %kind=spritekind || at x %x y %y of %c with %bc clothes and %hc hair "
+    //% blockId=playerCreate block="sprite of kind %kind=spritekind || at x %x y %y of %c"
     //% %bc.shadow="colorWheelPicker"
     //% %hc.shadow="colorWheelPicker"
     //% expandableArgumentMode=enabled
