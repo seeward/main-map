@@ -583,6 +583,7 @@ class Disciple {
         )
     }
     public idleAnimation(){
+        console.log(this._character)
         animation.runImageAnimation(
         this._player,
         this.changePlayerColor(this.idle, this._character),
