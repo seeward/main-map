@@ -439,8 +439,8 @@ class Disciple {
         . f f 8 f f f f f f 8 f f .
         . . f 8 8 8 8 8 8 8 8 f . .
         . . f 8 8 8 f f 8 8 8 f . .
-        . . f e e e f f f f f f . .
-        . . . f f f . . . . . . . .
+        . . f e e e f f e e e f . .
+        . . . f f f . . f f f . . .
     `,img`
         . . . . . f f f f . . . . .
         . . . f f e e e e f f . . .
