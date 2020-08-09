@@ -62,7 +62,7 @@ namespace DisciplePlayer {
     
     let _disciple : Disciple = null;
     
-    //% blockId=playerCreate block="sprite of kind %kind=spritekind || at x %x y %y of %c"
+    //% blockId=playerCreate block="sprite of kind %k=spritekind || at x %x y %y of %c"
     //% expandableArgumentMode=enabled
     //% inlineInputMode=inline
     //% blockSetVariable=disciple
@@ -73,10 +73,8 @@ namespace DisciplePlayer {
     }
     
 
-    //% blockId=changeClothesColor block="Change Clothes to %c and Hair to %h"
+    //% blockId=changeColor block="Change Clothes to %c and Hair to %h"
     export function changeColors(c:_colors, h: _colors) {
-        console.log(c)
-        console.log(h)
         _disciple.baseColor = c;
         _disciple.hairColor = h;
     }
