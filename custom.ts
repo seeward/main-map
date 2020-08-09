@@ -11,9 +11,38 @@ enum Characters {
      
 
 enum _colors {
+    //% block='None'
+    None = 0,
+    //% block='White'
+    White = 1,
+   //% block='Red'
+    Red = 2,
+    //% block='Pink'
+    Pink = 3,
+    //% block='Orange'
+    Orange = 4,
+    //% block='Yellow'
+    Yellow = 5,
+    //% block='Aqua'
+    Aqua = 6,
+    //% block='Green'
+    Green = 7,
+    //% block='Dark Blue'
+    DarkBlue = 8,
     //% block='Light Blue'
-    LightBlue = 0,
-   
+    LightBlue = 9,
+    //% block='Purple'
+    Purple = 10,
+    //% block='Grey'
+    Grey = 11,
+    //% block='Plive'
+    Olive = 12,
+    //% block='Cream'
+    Cream = 13,
+    //% block='Light Brown'
+    LightBrown = 14,
+    //% block='Black'
+    Black = 15
 
 }
 enum AnimationTypes {
@@ -34,8 +63,6 @@ namespace DisciplePlayer {
     let _disciple : Disciple = null;
     
     //% blockId=playerCreate block="sprite of kind %kind=spritekind || at x %x y %y of %c"
-    //% %bc.shadow="colorWheelPicker"
-    //% %hc.shadow="colorWheelPicker"
     //% expandableArgumentMode=enabled
     //% inlineInputMode=inline
     //% blockSetVariable=disciple
@@ -47,7 +74,7 @@ namespace DisciplePlayer {
     
 
     //% blockId=changeClothesColor block="Change Clothes to %c and Hair to %h"
-    export function changeColors(c:number, h: number) {
+    export function changeColors(c:_colors, h: _colors) {
         console.log(c)
         console.log(h)
         _disciple.baseColor = c;
