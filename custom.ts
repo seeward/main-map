@@ -74,8 +74,8 @@ class Disciple {
 
     private _player: Sprite = null; // hold our player
     public _character: Characters = null; // which Disciple
-    public baseColor: number = 1; 
-    public hairColor: number = 1
+    public baseColor: number = 2; 
+    public hairColor: number = 14;
     // animation image arrays
     private walkDown: Image[] = [img`
         . . . . . f f f f . . . . .
