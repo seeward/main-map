@@ -8,7 +8,14 @@ enum Characters {
     //% block='John',
     John = 4
 }
-    
+     
+
+enum _colors {
+    //% block='Light Blue'
+    LightBlue = 0,
+   
+
+}
 enum AnimationTypes {
         //% block='Walk Down'
         WalkDown = 1,
@@ -40,7 +47,6 @@ namespace DisciplePlayer {
     
 
     //% blockId=changeClothesColor block="Change Clothes to %c and Hair to %h"
-    //% h.shadow="colorNumberPicker"
     export function changeColors(c:number, h: number) {
         console.log(c)
         console.log(h)
@@ -505,8 +511,6 @@ class Disciple {
             value.replace(14, this.hairColor)
             newImgArray.push(value)
         })
-
-        
         return newImgArray
     }
     public walkRightAnimation(){
