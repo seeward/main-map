@@ -40,7 +40,7 @@ namespace DisciplePlayer {
     //% a.shadow=animationTypes
     export function playAnimation(s: AnimationTypes) {
         animation.stopAnimation(animation.AnimationTypes.All, _disciple.sprite)
-        console.log(_disciple._character)
+        //console.log(_disciple._character)
         switch (s) {
             case AnimationTypes.Idle:
                 _disciple.idleAnimation();
