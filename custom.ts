@@ -473,7 +473,7 @@ class Disciple {
             break
             case Characters.John: 
                 this.baseColor = 8
-                this.hairColor = 5
+                this.hairColor = 14
             break
             case Characters.Mark: 
                 this.baseColor = 2
@@ -485,7 +485,7 @@ class Disciple {
             break
             
         }
-        this._player = sprites.create(this.changePlayerColor(this.walkDown, c)[0], k)
+        this._player = sprites.create(this.changePlayerColor(this.idle, c)[0], k)
         this._character = c;
         this._player.x = x;
         this._player.y = y;
