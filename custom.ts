@@ -33,13 +33,18 @@ namespace DisciplePlayer {
     //% inlineInputMode=inline
     //% blockSetVariable=disciple
     //% weight=100
-    export function create(k: number, x: number = 25, y: number = 25, c: Characters, bc: number, hc: number): Disciple {
-       _disciple = new Disciple(k,x,y,c, bc, hc);
+    export function create(k: number, x: number = 25, y: number = 25, c: Characters): Disciple {
+       _disciple = new Disciple(k,x,y,c);
        return _disciple
     }
     
-    export function changeColors(bc: number, hc: number) {
 
+    //% blockId=changeColor block="Change Clothes %bc and Hair to %hc"
+    //% %bc.shadow="colorWheelPicker"
+    //% %hc.shadow="colorWheelPicker"
+    export function changeColors(bc: number, hc: number) {
+        _disciple.baseColor = bc;
+        _disciple.hairColor = hc
     }
     //% blockId=DiscipleAnimations block="Disciple Play %a Animation"
     //% a.shadow=animationTypes
@@ -462,49 +467,43 @@ class Disciple {
     ];
 
         
-    public constructor(k: number, x: number = 50, y: number = 50, c: Characters, bc?: number, hc?: number ) {
-        this.baseColor = bc
-        this.hairColor = hc
+    public constructor(k: number, x: number = 50, y: number = 50, c: Characters ) {
+         switch(c){
+            case Characters.Matthew: 
+                this.baseColor = 12
+                this.hairColor = 15
+            break
+            case Characters.John: 
+                this.baseColor = 8
+                this.hairColor = 5
+            break
+            case Characters.Mark: 
+                this.baseColor = 2
+                this.hairColor = 13
+            break
+            case Characters.Luke: 
+                this.baseColor = 9
+            break
+            
+        }
         this._player = sprites.create(this.changePlayerColor(this.walkDown, c)[0], k)
         this._character = c;
         this._player.x = x;
         this._player.y = y;
     }
     
-    public changePlayerColor(imgs: Image[], c: Characters, base?: number, hair?: number): Image[] {
+    public changePlayerColor(imgs: Image[], c: Characters): Image[] {
 
-        let newBaseColor: number = 1
-        
-        let newHairColor: number = 14
-        let newImgArray: Image[] = []
-        switch(c){
-            case Characters.Matthew: 
-                newBaseColor = 12
-                newHairColor = 15
-            break
-            case Characters.John: 
-                newBaseColor = 8
-                newHairColor = 5
-            break
-            case Characters.Mark: 
-                newBaseColor = 2
-                newHairColor = 13
-            break
-            case Characters.Luke: 
-                newBaseColor = 9
-            break
-            
-        }
+       
+        let newImgArray : Image[] = [];
 
         imgs.forEach(function(value: Image, index: number) {
-            value.replace(2, base ?  base : newBaseColor)
-            value.replace(8,  base ?  base : newBaseColor)
-            value.replace(14, hair ? hair : newHairColor)
+            value.replace(2, this.baseColor)
+            value.replace(8,  this.baseColor)
+            value.replace(14, this.hairColor)
             newImgArray.push(value)
         })
 
-        this.baseColor = base ?  base : newBaseColor
-        this.hairColor = hair ? hair : newHairColor
         
         return newImgArray
     }
