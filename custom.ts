@@ -31,7 +31,7 @@ namespace DisciplePlayer {
     //% inlineInputMode=inline
     //% blockSetVariable=disciple
     //% weight=100
-    export function create(k: number, x: number = 25, y: number = 25, c: Characters = 1): Disciple {
+    export function create(k: number, x: number = 25, y: number = 25, c: Characters): Disciple {
        _disciple = new Disciple(k,x,y,c);
        return _disciple
     }
