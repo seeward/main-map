@@ -483,6 +483,7 @@ class Disciple {
             break
             case Characters.Luke: 
                 this.baseColor = 9
+                this.hairColor = 5
             break
             
         }
