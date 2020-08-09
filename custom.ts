@@ -39,12 +39,12 @@ namespace DisciplePlayer {
     }
     
 
-    //% blockId=changeColor block="Change Clothes $bc and Hair to $hc"
-    //% %bc.shadow="colorNumberPicker"
-    //% %hc.shadow="colorNumberPicker"
-    export function changeColors(bc: number, hc: number) {
-        _disciple.baseColor = bc;
-        _disciple.hairColor = hc
+    //% blockId=changeClothesColor block="Change Clothes to $c and Hair to $h"
+    //% c.shadow="colorNumberPicker"
+    //% h.shadow="colorNumberPicker"
+    export function changeColors(c:number, h: number) {
+        _disciple.baseColor = c;
+        _disciple.hairColor = h;
     }
     //% blockId=DiscipleAnimations block="Disciple Play %a Animation"
     //% a.shadow=animationTypes
