@@ -27,15 +27,20 @@ namespace DisciplePlayer {
     let _disciple : Disciple = null;
     
     //% blockId=playerCreate block="sprite of kind %kind=spritekind || at x %x y %y of %c with %bc clothes and %hc hair "
+    //% %bc.shadow="colorWheelPicker"
+    //% %hc.shadow="colorWheelPicker"
     //% expandableArgumentMode=enabled
     //% inlineInputMode=inline
     //% blockSetVariable=disciple
     //% weight=100
     export function create(k: number, x: number = 25, y: number = 25, c: Characters, bc: number, hc: number): Disciple {
-       _disciple = new Disciple(k,x,y,c);
+       _disciple = new Disciple(k,x,y,c, bc, hc);
        return _disciple
     }
+    
+    export function changeColors(bc: number, hc: number) {
 
+    }
     //% blockId=DiscipleAnimations block="Disciple Play %a Animation"
     //% a.shadow=animationTypes
     export function playAnimation(s: AnimationTypes) {
