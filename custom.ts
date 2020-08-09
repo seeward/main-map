@@ -40,7 +40,7 @@ namespace DisciplePlayer {
     //% a.shadow=animationTypes
     export function playAnimation(s: AnimationTypes) {
         animation.stopAnimation(animation.AnimationTypes.All, _disciple.sprite)
-        //console.log(_disciple._character)
+ 
         switch (s) {
             case AnimationTypes.Idle:
                 _disciple.idleAnimation();
@@ -392,45 +392,45 @@ class Disciple {
         . . . f . . . . . f f . . . 
         `]
     private idle:Image[] = [img`
-    . . . . . f f f f . . . . . 
-    . . . f f e e e e f f . . . 
-    . . f e e e e e e e e f . . 
-    . . f e e e e e e e e f . . 
-    . f e d e e e e e e e e f . 
-    . f d d d d e e e e e d f . 
-    . f d d d f d d f d d d f . 
-    . . f d d d d f d d d f . . 
-    . . . f d d d f d d f . . . 
-    . . f 2 f d d d d f 2 f . . 
-    . f d 2 2 f f f f 2 2 d f . 
-    f d d 2 2 2 2 2 2 2 2 d d f 
-    f d d f 2 2 2 2 2 2 f d d f 
-    f d d f 2 2 2 2 2 2 f d d f 
-    . f f 8 f f f f f f 8 f f . 
-    . . f 8 8 8 8 8 8 8 8 f . . 
-    . . f 8 8 8 f f 8 8 8 f . . 
-    . . f e e e f f e e e f . . 
-    . . . f f f . . f f f . . . 
+        . . . . . f f f f . . . . .
+        . . . f f e e e e f f . . .
+        . . f e e e e e e e e f . .
+        . . f e e e e e e e e f . .
+        . f e d e e e e e e e e f .
+        . f d d d d e e e e e d f .
+        . f d d d f d d f d d d f .
+        . . f d d d d f d d d f . .
+        . . . f d d d f d d f . . .
+        . . f 2 f d d d d f 2 f . .
+        . f d 2 2 f f f f 2 2 d f .
+        f d d 2 2 2 2 2 2 2 2 d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        . f f 8 f f f f f f 8 f f .
+        . . f 8 8 8 8 8 8 8 8 f . .
+        . . f 8 8 8 f f 8 8 8 f . .
+        . . f e e e f f e e e f . .
+        . . . f f f . . f f f . . .
     `,img`
-    . . . . . . . . . . . . . . 
-    . . . . . f f f f . . . . . 
-    . . . f f e e e e f f . . . 
-    . . f e e e e e e e e f . . 
-    . . f e e e e e e e e f . . 
-    . f e d e e e e e e e e f . 
-    . f d d d d e e e e e d f . 
-    . f d d d f d d f d d d f . 
-    . . f d d d d f d d d f . . 
-    . d d f d d d f d d f . . . 
-    . d f 2 f d d d d f f f . . 
-    . f 2 2 2 f f f f f d d f . 
-    . f 2 2 2 2 2 2 2 f d d f . 
-    . . f f 2 2 2 2 2 f d d . . 
-    . . f 8 f f f f f f 8 f . . 
-    . . f 8 8 8 8 f 8 8 8 f . . 
-    . . f 8 8 8 f f f f f f . . 
-    . . f e e e f . . . . . . . 
-    . . . f f f . . . . . . . . 
+        1 . . . . . . . . . . . . .
+        . . . . . f f f f . . . . .
+        . . . f f e e e e f f . . .
+        . . f e e e e e e e e f . .
+        . . f e e e e e e e e f . .
+        . f e d e e e e e e e e f .
+        . f d d d d e e e e e d f .
+        . f d d d f d d f d d d f .
+        . . f d d d d f d d d f . .
+        . . . f d d d f d d f . . .
+        . . f f f d d d d f f f . .
+        . f d 2 2 f f f f 2 2 d f .
+        f d d 2 2 2 2 2 2 2 2 d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        . f f 8 f f f f f f 8 f f .
+        . . f 8 8 8 8 8 8 8 8 f . .
+        . . f 8 8 8 f f 8 8 8 f . .
+        . . f e e e f . f f f . . .
     `,img`
     . . . . . f f f f . . . . . 
     . . . f f e e e e f f . . . 
@@ -487,7 +487,6 @@ class Disciple {
             
         }
 
-        console.log(`${newBaseColor}   ${newHairColor}` ) 
         imgs.forEach(function(value: Image, index: number) {
             value.replace(2, newBaseColor)
             value.replace(8, newBaseColor)
@@ -530,7 +529,6 @@ class Disciple {
         )
     }
     public idleAnimation(){
-        
         animation.runImageAnimation(
         this._player,
         this.changePlayerColor(this.idle, this._character),
