@@ -35,7 +35,7 @@ enum _colors {
     Purple = 10,
     //% block='Grey'
     Grey = 11,
-    //% block='Plive'
+    //% block='Olive'
     Olive = 12,
     //% block='Cream'
     Cream = 13,
@@ -73,7 +73,7 @@ namespace DisciplePlayer {
     }
     
 
-    //% blockId=changeColor block="Change Clothes to %c and Hair to %h"
+    //% blockId=changeColor block="Change Clothes to $c and Hair to $h"
     export function changeColors(c:_colors, h: _colors) {
         _disciple.baseColor = c;
         _disciple.hairColor = h;
@@ -526,8 +526,6 @@ class Disciple {
     }
     
     public changePlayerColor(imgs: Image[], c: Characters): Image[] {
-
-       
         let newImgArray : Image[] = [];
 
         imgs.forEach(function(value: Image, index: number) {
