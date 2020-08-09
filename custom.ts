@@ -40,6 +40,7 @@ namespace DisciplePlayer {
     //% a.shadow=animationTypes
     export function playAnimation(s: AnimationTypes) {
         animation.stopAnimation(animation.AnimationTypes.All, _disciple.sprite)
+        console.log(_disciple._character)
         switch (s) {
             case AnimationTypes.Idle:
                 _disciple.idleAnimation();
@@ -64,7 +65,7 @@ namespace DisciplePlayer {
 class Disciple {
 
     private _player: Sprite = null; // hold our player
-    private _character: Characters = null; // which Disciple
+    public _character: Characters = null; // which Disciple
     // animation image arrays
     private walkDown: Image[] = [img`
         . . . . . f f f f . . . . .
