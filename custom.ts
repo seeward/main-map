@@ -521,7 +521,7 @@ class Disciple {
     }
 
     public changePlayerColor(imgs: Image[], c: Characters): Image[] {
-console.log(c)        
+// console.log(c)        
 
         let newBaseColor: number = 1
         let newHairColor: number = 14
@@ -545,7 +545,7 @@ console.log(c)
             
         }
 
-        console.log(`${newBaseColor}  - ${newHairColor}` ) 
+        console.log(`${newBaseColor}   ${newHairColor}` ) 
         imgs.forEach(function(value: Image, index: number) {
             value.replace(2, newBaseColor)
             value.replace(8, newBaseColor)
