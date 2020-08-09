@@ -392,25 +392,25 @@ class Disciple {
         . . . f . . . . . f f . . . 
         `]
     private idle:Image[] = [img`
-         . . . . . f f f f . . . . .
-        . . . f f e e e e f f . . .
-        . . f e e e e e e e e f . .
-        . . f e e e e e e e e f . .
-        . f e d e e e e e e e e f .
-        . f d d d d e e e e e d f .
-        . f d d d f d d f d d d f .
-        . . f d d d d f d d d f . .
-        . . . f d d d f d d f . . .
-        . . f 2 f d d d d f 2 f . .
-        . f d 2 2 f f f f 2 2 d f .
-        f d d 2 2 2 2 2 2 2 2 d d f
-        f d d f 2 2 2 2 2 2 f d d f
-        f d d f 2 2 2 2 2 2 f d d f
-        . f f 8 f f f f f f 8 f f .
-        . . f 8 8 8 8 8 8 8 8 f . .
-        . . f 8 8 8 f f 8 8 8 f . .
-        . . f e e e f f e e e f . .
-        . . . f f f . . f f f . . .
+        . . . . . f f f f . . . . . 
+        . . . f f e e e e f f . . . 
+        . . f e e e e e e e e f . . 
+        . . f e e e e e e e e f . . 
+        . f e d e e e e e e e e f . 
+        . f d d d d e e e e e d f . 
+        . f d d d f d 3 f d d d f . 
+        . . f d d d d f d d d f . . 
+        . . . f d d d f d d f . . . 
+        . . f 4 f d d d d f 4 f . . 
+        . f d 4 4 f f f f 4 4 d f . 
+        f d d 4 4 4 4 4 4 4 4 d d f 
+        f d d f 4 4 4 4 4 4 f d d f 
+        f d d f 4 4 4 4 4 4 f d d f 
+        . f f 4 f f f f f f 4 f f . 
+        . . f 4 4 4 4 4 4 4 4 f . . 
+        . . f 4 4 4 f f 4 4 4 f . . 
+        . . f e e e f f e e e f . . 
+        . . . f f f . . f f f . . . 
         `,img`
         . . . . . . . . . . . . . . 
         . . . . . f f f f . . . . . 
@@ -425,32 +425,32 @@ class Disciple {
         . f d 4 f d d d d f 4 d f . 
         f d d 4 4 f f f f 4 4 d d f 
         f d d f 4 4 4 4 4 4 f d d f 
-        f d d f 4 4 4 4 f f f d d f 
-        . f f 4 f f f f 4 4 4 f f . 
+        f d d f 4 4 4 4 4 4 f d d f 
+        . f f 4 f f f f f f 4 f f . 
         . . f 4 4 4 4 4 4 4 4 f . . 
         . . f 4 4 4 f f 4 4 4 f . . 
         . . f e e e f f f f f f . . 
         . . . f f f . . . . . . . . 
         `,img`
-         . . . . . f f f f . . . . .
-        . . . f f e e e e f f . . .
-        . . f e e e e e e e e f . .
-        . . f e e e e e e e e f . .
-        . f e d e e e e e e e e f .
-        . f d d d d e e e e e d f .
-        . f d d d f d d f d d d f .
-        . . f d d d d f d d d f . .
-        . . . f d d d f d d f . . .
-        . . f 2 f d d d d f 2 f . .
-        . f d 2 2 f f f f 2 2 d f .
-        f d d 2 2 2 2 2 2 2 2 d d f
-        f d d f 2 2 2 2 2 2 f d d f
-        f d d f 2 2 2 2 2 2 f d d f
-        . f f 8 f f f f f f 8 f f .
-        . . f 8 8 8 8 8 8 8 8 f . .
-        . . f 8 8 8 f f 8 8 8 f . .
-        . . f e e e f f e e e f . .
-        . . . f f f . . f f f . . .
+        . . . . . . . . . . . . . . 
+        . . . . . f f f f . . . . . 
+        . . . f f e e e e f f . . . 
+        . . f e e e e e e e e f . . 
+        . . f e e e e e e e e f . . 
+        . f e d e e e e e e e e f . 
+        . f d d d d e e e e e d f . 
+        . f d d d f d d f d d d f . 
+        . . f d d d d f d d d f . . 
+        . . f f d d d f d d f f . . 
+        . f d 4 f d d d d f 4 d f . 
+        f d d 4 4 f f f f 4 4 d d f 
+        f d d f 4 4 4 4 4 4 f d d f 
+        f d d f 4 4 4 4 4 4 f d d f 
+        . f f 4 f f f f f f 4 f f . 
+        . . f 4 4 4 4 4 4 4 4 f . . 
+        . . f 4 4 4 f f 4 4 4 f . . 
+        . . f e e e f f e e e f . . 
+        . . . f f f . . f f f . . . 
         `,img`
         . . . . . f f f f . . . . . 
         . . . f f e e e e f f . . . 
@@ -461,11 +461,12 @@ class Disciple {
         . f d d d f d d f d d d f . 
         . . f d d d d f d d d f . . 
         . . . f d d d f d d f . . . 
-      . f d 2 2 f f f f 2 2 d f .
-        f d d 2 2 2 2 2 2 2 2 d d f
-        f d d f 2 2 2 2 2 2 f d d f
-        f d d f 2 2 2 2 2 2 f d d f
-        . f f 8 f f f f f f 8 f f .
+        . . f 4 f d d d d f 4 f . . 
+        . f d 4 4 f f f f 4 4 d f . 
+        f d d 4 4 4 4 4 4 4 4 d d f 
+        f d d f 4 4 4 4 4 4 f d d f 
+        f d d f 4 4 4 4 4 4 f d d f 
+        . f f 4 f f f f f f 4 f f . 
         . . f 4 4 4 4 4 4 4 4 f . . 
         . . f 4 4 4 f f 4 4 4 f . . 
         . . f e e e f f f f f f . . 
@@ -511,7 +512,8 @@ class Disciple {
         . . f e e e f f e e e f . . 
         . . . f f f . . f f f . . . 
         `]
-    
+
+        
     public constructor(k: number, x: number = 50, y: number = 50, c: Characters ) {
         this._player = sprites.create(this.changePlayerColor(this.walkDown, c)[0], k)
         this._character = c;
