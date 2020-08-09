@@ -62,7 +62,7 @@ namespace DisciplePlayer {
     
     let _disciple : Disciple = null;
     
-    //% blockId=playerCreate block="sprite of kind %kind=spritekind || at x %x y %y of %c"
+    //% blockId=playerCreate block="sprite of kind %k=spritekind || at x %x y %y of %c"
     //% expandableArgumentMode=enabled
     //% inlineInputMode=inline
     //% blockSetVariable=disciple
