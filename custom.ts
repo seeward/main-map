@@ -331,25 +331,25 @@ class Disciple {
         . . . f 8 8 8 8 8 f . . . . 
         . . . . f f f f f . . . . . 
         `,img`
-        . . . . . . . . . . . . . . 
-        . . . . . f f f f . . . . . 
-        . . . f f e e e e f f . . . 
-        . . f e e e e e e e e f . . 
-        . . f e e e e e e e e f . . 
-        . f e e e e e e e e d e f . 
-        f e e e e e e e e d d d f . 
-        . f e e e e e e d d f d f . 
-        . f e e d d e e d d f d f . 
-        . . f e d d d d d d d f . . 
-        . . f f d d d d d d f . . . 
-        . . f d f f f f f f d f . . 
-        . f d d 2 2 2 2 2 f d d f . 
-        . . f 2 2 2 2 2 2 f d d f . 
-        . f e f 8 8 f 8 8 8 f f . . 
-        f e e e f 8 f 8 8 8 f f . . 
-        . f e e e f . f f f e e f . 
-        . . f e f . . . f e e f . . 
-        . . . f . . . . . f f . . . 
+            . . . . . . . . . . . . . .
+            . . . . . f f f f . . . . .
+            . . . f f e e e e f f . . .
+            . . f e e e e e e e e f . .
+            . . f e e e e e e e e f . .
+            . f e e e e e e e e d e f .
+            f e e e e e e e e d d d f .
+            . f e e e e e e d d f d f .
+            . f e e d d e e d d f d f .
+            . . f e d d d d d d d f . .
+            . . f f d d d d d d f . . .
+            . . f d f f f f f f d f f .
+            . f d d 2 2 2 2 2 f d d d f
+            . . f 2 2 2 2 2 2 f d d d f
+            . f e f 8 8 f 8 8 f d d f f
+            f e e e f 8 f 8 8 8 f f . .
+            . f e e e f . f f f e e f .
+            . . f e f . . . f e e f . .
+            . . . f . . . . . f f . . .
         `,img`
         . . . . . f f f f . . . . . 
         . . . f f e e e e f f . . . 
@@ -371,25 +371,25 @@ class Disciple {
         . . . f 8 8 8 8 8 f . . . . 
         . . . . f f f f f . . . . . 
         `,img`
-        . . . . . . . . . . . . . . 
-        . . . . . f f f f . . . . . 
-        . . . f f e e e e f f . . . 
-        . . f e e e e e e e e f . . 
-        . . f e e e e e e e e f . . 
-        . f e e e e e e e e d e f . 
-        f e e e e e e e e d d d f . 
-        . f e e e e e e d d f d f . 
-        . f e e d d e e d d f d f . 
-        . . f e d d d d d d d f . . 
-        . . f f d d d d d d f . . . 
-        . . f d f f f f f f d f . . 
-        . f d d 2 2 2 2 2 f d d f . 
-        . . f 2 2 2 2 2 2 f d d f . 
-        . f f f 8 8 f 8 8 8 f e . . 
-        f e e f f 8 f 8 8 8 e e f . 
-        . f e f f f . f f f e e f . 
-        . . f e f . . . f e e f . . 
-        . . . f . . . . . f f . . . 
+            . . . . . . . . . . . . . .
+            . . . . . f f f f . . . . .
+            . . . f f e e e e f f . . .
+            . . f e e e e e e e e f . .
+            . . f e e e e e e e e f . .
+            . f e e e e e e e e d e f .
+            f e e e e e e e e d d d f .
+            . f e e e e e e d d f d f .
+            . f e e d d e e d d f d f .
+            f f f e d d d d d d d f . .
+            f d d f d d d d d d f . . .
+            f d d d f f f f f f d f . .
+            . f d d f 2 2 2 2 f d d f .
+            . . f f f 2 2 2 2 f f f f .
+            . f f f 8 8 f 8 8 8 f e . .
+            f e e f f 8 f 8 8 8 e e f .
+            . f e f f f . f f f e e f .
+            . . f e f . . . f e e f . .
+            . . . f . . . . . f f . . .
         `]
     private idle:Image[] = [img`
         . . . . . f f f f . . . . .
