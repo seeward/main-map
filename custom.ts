@@ -40,7 +40,10 @@ namespace DisciplePlayer {
     
 
     //% blockId=changeClothesColor block="Change Clothes to %c and Hair to %h"
+    //% h.shadow="colorNumberPicker"
     export function changeColors(c:number, h: number) {
+        console.log(c)
+        console.log(h)
         _disciple.baseColor = c;
         _disciple.hairColor = h;
     }
