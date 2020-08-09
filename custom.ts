@@ -512,7 +512,7 @@ class Disciple {
         . . . f f f . . f f f . . . 
         `]
     
-    public constructor(k: number, x: number = 50, y: number = 50, c: Characters = 1) {
+    public constructor(k: number, x: number = 50, y: number = 50, c: Characters ) {
         this._player = sprites.create(this.changePlayerColor(this.walkDown, c)[0], k)
         this._character = c;
         this._player.x = x;
