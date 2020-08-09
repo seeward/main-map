@@ -26,12 +26,12 @@ namespace DisciplePlayer {
     
     let _disciple : Disciple = null;
     
-    //% blockId=playerCreate block="sprite of kind %kind=spritekind || at x %x y %y of %c"
-    //% expandableArgumentMode=toggle
+    //% blockId=playerCreate block="sprite of kind %kind=spritekind || at x %x y %y of %c with %bc clothes and %hc hair "
+    //% expandableArgumentMode=enabled
     //% inlineInputMode=inline
     //% blockSetVariable=disciple
     //% weight=100
-    export function create(k: number, x: number = 25, y: number = 25, c: Characters): Disciple {
+    export function create(k: number, x: number = 25, y: number = 25, c: Characters, bc: number, hc: number): Disciple {
        _disciple = new Disciple(k,x,y,c);
        return _disciple
     }
@@ -66,6 +66,8 @@ class Disciple {
 
     private _player: Sprite = null; // hold our player
     public _character: Characters = null; // which Disciple
+    public baseColor: number = 1; 
+    public hairColor: number = 1
     // animation image arrays
     private walkDown: Image[] = [img`
         . . . . . f f f f . . . . .
@@ -455,16 +457,19 @@ class Disciple {
     ];
 
         
-    public constructor(k: number, x: number = 50, y: number = 50, c: Characters ) {
+    public constructor(k: number, x: number = 50, y: number = 50, c: Characters, bc?: number, hc?: number ) {
+        this.baseColor = bc
+        this.hairColor = hc
         this._player = sprites.create(this.changePlayerColor(this.walkDown, c)[0], k)
         this._character = c;
         this._player.x = x;
         this._player.y = y;
     }
-
-    public changePlayerColor(imgs: Image[], c: Characters): Image[] {
+    
+    public changePlayerColor(imgs: Image[], c: Characters, base?: number, hair?: number): Image[] {
 
         let newBaseColor: number = 1
+        
         let newHairColor: number = 14
         let newImgArray: Image[] = []
         switch(c){
@@ -487,11 +492,14 @@ class Disciple {
         }
 
         imgs.forEach(function(value: Image, index: number) {
-            value.replace(2, newBaseColor)
-            value.replace(8, newBaseColor)
-            value.replace(14, newHairColor)
+            value.replace(2, base ?  base : newBaseColor)
+            value.replace(8,  base ?  base : newBaseColor)
+            value.replace(14, hair ? hair : newHairColor)
             newImgArray.push(value)
         })
+
+        this.baseColor = base ?  base : newBaseColor
+        this.hairColor = hair ? hair : newHairColor
         
         return newImgArray
     }
