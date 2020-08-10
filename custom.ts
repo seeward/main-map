@@ -917,13 +917,11 @@ class Pharisee {
     `];
     private walkLeft:Image[] = null
 
-    public getWalkRight():Image[]{
-        return this.walkRight
-    }
+
     private _pharisee: Sprite = null
 
         public constructor(k: number, x: number = 50, y: number = 50 ) {
-        this.walkLeft = this.getWalkRight().map(function(eachOne:Image){
+        this.walkLeft = this.walkRight.map(function(eachOne:Image){
         eachOne.flipX()
         return eachOne
     })
