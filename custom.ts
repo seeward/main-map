@@ -631,17 +631,17 @@ class Pharisee {
     private walkLeft:Image[] = null
     private idle:Image[] = [img`
     . . . . . f f f f f f . . . . . 
-    . f f . f e e e e e e f . . . . 
-    f d d f 1 1 1 1 1 1 1 1 f . . . 
-    f d d f e e d d d d e e 1 f . . 
-    . f f 1 e d f d d f d e 1 f . . 
-    . c c 1 e d d d f d d e 1 f . . 
-    . c c 1 e d d f f d d e 1 f . . 
-    . c 1 1 e e e d d e e e 1 1 f . 
+    . . . . f e e e e e e f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . . f 1 e e d d d d e e 1 f . . 
+    . . f 1 e d f d d f d e 1 f . . 
+    . . f 1 e d d d f d d e 1 f . . 
+    . . f 1 e d d f f d d e 1 f . . 
+    . f 1 1 e e e d d e e e 1 1 f . 
     . f 1 1 f f e e e e f f 1 1 f . 
     . f 1 1 f c f f f f c f 1 d d f 
-    . f 8 8 f c c c c c c f 8 d d f 
-    . f 1 1 f c c c c c c f 1 1 f . 
+    f d d 8 f c c c c c c f 8 d d f 
+    f d d 1 f c c c c c c f 1 1 f . 
     . f 8 8 f f f f f f f f 8 8 f . 
     . f 1 1 f c c c c c c f 1 1 f . 
     . f f f f c c f f c c f f f f . 
@@ -649,15 +649,15 @@ class Pharisee {
     `,img`
     . . . . . f f f f f f . . . . . 
     . . . . f e e e e e e f . . . . 
-    . f f . 1 1 1 1 1 1 1 1 f . . . 
-    f d d f e e d d d d e e 1 f . . 
-    f d d f e d f d d f d e 1 f . . 
-    . f f 1 e d d d f d d e 1 f . . 
-    . c c 1 e d d f f d d e 1 f . . 
-    . c 1 1 e e e d d e e e 1 1 f . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . . f 1 e e d d d d e e 1 f . . 
+    . . f 1 e d f d d f d e 1 f . . 
+    . . f 1 e d d d f d d e 1 f . . 
+    . . f 1 e d d f f d d e 1 f . . 
+    . f 1 1 e e e d d e e e 1 1 f . 
     . f 1 1 f f e e e e f f 1 1 f . 
-    . f 1 1 f c f f f f c f 1 1 f . 
-    . f 8 8 f c c c c c c f 8 d d f 
+    f d d 1 f c f f f f c f 1 1 f . 
+    f d d 8 f c c c c c c f 8 d d f 
     . f 1 1 f c c c c c c f 1 d d f 
     . f 8 8 f f f f f f f f 8 8 f . 
     . f 1 1 f c c c c c c f 1 1 f . 
@@ -667,13 +667,13 @@ class Pharisee {
     . . . . . f f f f f f . . . . . 
     . . . . f e e e e e e f . . . . 
     . . . f 1 1 1 1 1 1 1 1 f . . . 
-    . f f 1 e e d d d d e e 1 f . . 
-    f d d f e d f d d f d e 1 f . . 
-    f d d f e d d d f d d e 1 f . . 
-    . f f 1 e d d f f d d e 1 f . . 
-    . c 1 1 e e e d d e e e 1 1 f . 
-    . f 1 1 f f e e e e f f 1 1 f . 
-    . f 1 1 f c f f f f c f 1 d d f 
+    . . f 1 e e d d d d e e 1 f . . 
+    . . f 1 e d f d d f d e 1 f . . 
+    . . f 1 e d d d f d d e 1 f . . 
+    . . f 1 e d d f f d d e 1 f . . 
+    . f 1 1 e e e d d e e e 1 1 f . 
+    f d d 1 f f e e e e f f 1 1 f . 
+    f d d 1 f c f f f f c f 1 d d f 
     . f 8 8 f c c c c c c f 8 d d f 
     . f 1 1 f c c c c c c f 1 1 f . 
     . f 8 8 f f f f f f f f 8 8 f . 
@@ -682,40 +682,24 @@ class Pharisee {
     . f f f f c f . . f c f f f f . 
     `,img`
     . . . . . f f f f f f . . . . . 
-    . f f . f e e e e e e f . . . . 
-    f d d f 1 1 1 1 1 1 1 1 f . . . 
-    f d d f e e d d d d e e 1 f . . 
-    . f f 1 e d f d d f d e 1 f . . 
-    . c c 1 e d d d f d d e 1 f . . 
-    . c c 1 e d d f f d d e 1 f . . 
-    . c 1 1 e e e d d e e e 1 1 f . 
-    . f 1 1 f f e e e e f f 1 1 f . 
-    . f 1 1 f c f f f f c f 1 1 f . 
-    . f 8 8 f c c c c c c f 8 d d f 
-    . f 1 1 f c c c c c c f 1 d d f 
-    . f 8 8 f f f f f f f f 8 8 f . 
-    . f 1 1 f c c c c c c f 1 1 f . 
-    . f f f f c c f f c c f f f f . 
-    . f f f f c f . . f c f f f f . 
-    `,img`
-    . f f . . f f f f f f . . . . . 
-    f d d f f e e e e e e f . . . . 
-    f d d f 1 1 1 1 1 1 1 1 f . . . 
-    . f f 1 e e d d d d e e 1 f . . 
-    . c c 1 e d f d d f d e 1 f . . 
-    . c 1 1 e d d d f d d e 1 f . . 
-    . c 1 1 e d d f f d d e 1 f . . 
-    . c 1 1 e e e d d e e e 1 1 f . 
+    . . . . f e e e e e e f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . . f 1 e e d d d d e e 1 f . . 
+    . . f 1 e d f d d f d e 1 f . . 
+    . . f 1 e d d d f d d e 1 f . . 
+    . . f 1 e d d f f d d e 1 f . . 
+    . f 1 1 e e e d d e e e 1 1 f . 
     . f 1 1 f f e e e e f f 1 1 f . 
     . f 1 1 f c f f f f c f 1 d d f 
-    . f 8 8 f c c c c c c f 8 d d f 
-    . f 1 1 f c c c c c c f 1 1 f . 
+    f d d 8 f c c c c c c f 8 d d f 
+    f d d 1 f c c c c c c f 1 1 f . 
     . f 8 8 f f f f f f f f 8 8 f . 
     . f 1 1 f c c c c c c f 1 1 f . 
     . f f f f c c f f c c f f f f . 
     . f f f f c f . . f c f f f f . 
     `];
-    private walkdown:Image[] = [img`
+    
+private walkdown:Image[] = [img`
         . . . . . f f f f f f . . . . .
         . . . . f e e e e e e f . . . .
         . . . f 1 1 1 1 1 1 1 1 f . . .
