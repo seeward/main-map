@@ -8,8 +8,6 @@ enum Characters {
     //% block='John',
     John = 4
 }
-     
-
 enum _colors {
     //% block='None'
     None = 0,
@@ -57,6 +55,8 @@ enum AnimationTypes {
         //% block='Walk Right'
         WalkRight = 5
     }
+
+
 
 namespace DisciplePlayer {
     
