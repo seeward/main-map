@@ -912,13 +912,18 @@ class Pharisee {
     . . f f f f c c c f e e f . . . 
     . . . . . f f f f f f f . . . . 
     `];
+    private walkLeft:Image[] = null
 
-
-
+    public getWalkRight():Image[]{
+        return this.walkRight
+    }
     private _pharisee: Sprite = null
 
         public constructor(k: number, x: number = 50, y: number = 50 ) {
-         
+    //     this.walkLeft = this.getWalkRight().map(function(eachOne:Image){
+    //         let t = eachOne.flipX()
+    //     return t
+    // })
         this._pharisee = sprites.create(this.idle[0], k)
 
         this._pharisee.x = x;
@@ -960,7 +965,14 @@ class Pharisee {
         true
         )
     }
-
+public walkLeftAnimation(){
+        animation.runImageAnimation(
+        this._pharisee,
+        this.walkLeft,
+        200,
+        true
+        )
+    }
     //% blockId=phariseeSprite block="%Pharisee(pharisee) sprite"
     //% weight=8
     get sprite(): Sprite {
