@@ -92,6 +92,9 @@ namespace DisciplePlayer {
             case AnimationTypes.Idle:
                 _pharisee.idleAnimation();
                 break
+             case AnimationTypes.WalkDown:
+                _pharisee.walkDownAnimation();
+                break
         }
     }
 
@@ -781,6 +784,15 @@ class Pharisee {
         this._pharisee,
         this.idle,
         100,
+        true
+        )
+    }
+
+    public walkDownAnimation(){
+        animation.runImageAnimation(
+        this._pharisee,
+        this.walkdown,
+        125,
         true
         )
     }
