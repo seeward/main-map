@@ -1030,7 +1030,7 @@ class Pharisee {
         animation.runImageAnimation(
         this._pharisee,
         this.angry,
-        200,
+        100,
         true
         )
     }
@@ -1039,7 +1039,7 @@ class Pharisee {
         animation.runImageAnimation(
         this._pharisee,
         this.idle,
-        100,
+        200,
         true
         )
     }
