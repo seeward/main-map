@@ -98,6 +98,9 @@ namespace DisciplePlayer {
             case AnimationTypes.WalkUp:
                 _pharisee.walkUpAnimation();
                 break
+            case AnimationTypes.WalkRight:
+                _pharisee.walkRightAnimation();
+                break
         }
     }
 
