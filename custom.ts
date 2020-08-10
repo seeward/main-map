@@ -531,6 +531,68 @@ class Disciple {
         . . . . . . . . f f f . . .
     `
     ];
+    private angry:Image[] = [img`
+        . . . . . f f f f . . . . .
+        . . . f f e e e e f f . . .
+        . . f e e e e e e e e f . .
+        . . f e e e e e e e e f . .
+        . f e d e e e e e e e e f .
+        . f d d d d e e e e e d f .
+        . f d d d f d d f d d d f .
+        . . f d d d d f d d d f . .
+        . . . f d d d f d d f . . .
+        . . f 2 f d d d d f 2 f . .
+        . f d 2 2 f f f f 2 2 d f .
+        f d d 2 2 2 2 2 2 2 2 d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        . f f 8 f f f f f f 8 f f .
+        . . f 8 8 8 8 8 8 8 8 f . .
+        . . f 8 8 8 f f 8 8 8 f . .
+        . . f e e e f f e e e f . .
+        . . . f f f . . f f f . . .
+    `,img`
+        . . . . . . . . . . . . . .
+        . . . . . f f f f . . . . .
+        . . . f f e e e e f f . . .
+        . . f e e e e e e e e f . .
+        . . f e e e e e e e e f . .
+        . f e d e e e e e e e e f .
+        . f d d d d e e e e e d f .
+        . f d d d f d d f d d d f .
+        . . f d d d d f d d d f . .
+        . . f f d d d f d d f f . .
+        . f d 2 f d d d d f 2 d f .
+        f d d 2 f f f f f f 2 d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        . f f 8 f f f f f f 8 f f .
+        . . f 8 8 8 8 8 8 8 8 f . .
+        . . f 8 8 8 f f 8 8 8 f . .
+        . . f e e e f f e e e f . .
+        . . . f f f . . f f f . . .
+    `,img`
+        . . . . . f f f f . . . . .
+        . . . f f e e e e f f . . .
+        . . f e e e e e e e e f . .
+        . . f e e e e e e e e f . .
+        . f e d e e e e e e e e f .
+        . f d d d d e e e e e d f .
+        . f d d d f d d f d d d f .
+        . . f d d d d f d d d f . .
+        . . . f d d d f d d f . . .
+        . . f 2 f d d d d f 2 f . .
+        . f d 2 2 f f f f 2 2 d f .
+        f d d 2 2 2 2 2 2 2 2 d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        f d d f 2 2 2 2 2 2 f d d f
+        . f f 8 f f f f f f 8 f f .
+        . . f 8 8 8 8 8 8 8 8 f . .
+        . . f 8 8 8 f f 8 8 8 f . .
+        . . f f f f f f e e e f . .
+        . . . . . . . . f f f . . .
+    `
+    ];
 
         
     public constructor(k: number, x: number = 50, y: number = 50, c: Characters ) {
@@ -606,6 +668,15 @@ class Disciple {
         animation.runImageAnimation(
         this._player,
         this.changePlayerColor(this.idle, this._character),
+        200,
+        true
+        )
+    }
+
+    public angryAnimation(){
+        animation.runImageAnimation(
+        this._player,
+        this.changePlayerColor(this.angry, this._character),
         200,
         true
         )
