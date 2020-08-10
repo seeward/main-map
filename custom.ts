@@ -621,7 +621,7 @@ class Disciple {
 
 //% blockNamespace=DisciplePlayer
 class Pharisee {
-
+    private walkLeft:Image[] = null
     private idle:Image[] = [img`
     . . . . . f f f f f f . . . . . 
     . f f . f e e e e e e f . . . . 
@@ -915,15 +915,16 @@ class Pharisee {
     . . f f f f c c c f e e f . . . 
     . . . . . f f f f f f f . . . . 
     `];
-    private walkLeft:Image[] = null
+    
 
 
     private _pharisee: Sprite = null
 
         public constructor(k: number, x: number = 50, y: number = 50 ) {
         this.walkLeft = this.walkRight.map(function(eachOne:Image){
-        eachOne.flipX()
-        return eachOne
+            let t = eachOne.clone()
+        t.flipX()
+        return t
     })
         this._pharisee = sprites.create(this.idle[0], k)
 
