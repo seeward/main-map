@@ -840,6 +840,76 @@ class Pharisee {
     . f f f f c c c . . . f f f f . 
     . . . . f f f f . . . . . . . . 
     `];
+    private walkRight:Image[] = [img`
+    . . . . . f f f f f . . . . . . 
+    . . . . f e e e e e f f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 1 . . . 
+    . . f 1 1 1 1 d d d d e f . . . 
+    . f 1 1 1 1 d d d d f d d f . . 
+    . f 1 1 1 1 d d d d d d d f . . 
+    . . f 1 1 1 d d d f f d f . . . 
+    . . . f 1 1 d d d f d f . . . . 
+    . . . f 1 1 d d d d f . . . . . 
+    . . . f 1 1 f f f f . . . . . . 
+    . . . . f 1 1 1 1 1 1 1 . . . . 
+    . . . . f c c c c c f 1 1 . . . 
+    . . . . f f f f f f f f 8 . . . 
+    . . . . f c f d d f c f 1 . . . 
+    . . . . f c f d d f c f 8 . . . 
+    . . . . . f f f f f f . . . . . 
+    `,img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . f f f f f . . . . . . 
+    . . . . f e e e e e f f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 1 . . . 
+    . . f 1 1 1 1 d d d d e f . . . 
+    . f 1 1 1 1 d d d d f d d f . . 
+    . f 1 1 1 1 d d d d d d d f . . 
+    . . f 1 1 1 d d d f f d f . . . 
+    . . . f 1 1 d d d f d f . . . . 
+    . . . f 1 1 d d d d f . . . . . 
+    . . . f 1 1 f f f f . f f f f . 
+    . . f . f 1 1 1 1 1 1 f d d f . 
+    . f e f c f f f f f f f d d f . 
+    . f e e f c c c c c c f f f f . 
+    . . f e e f c c c c c c 1 1 . . 
+    . . . f e f f f f f . . . . . . 
+    `,img`
+    . . . . . f f f f f . . . . . . 
+    . . . . f e e e e e f f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 1 . . . 
+    . . f 1 1 1 1 d d d d e f . . . 
+    . f 1 1 1 1 d d d d f d d f . . 
+    . f 1 1 1 1 d d d d d d d f . . 
+    . . f 1 1 1 d d d f f d f . . . 
+    . . . f 1 1 d d d f d f . . . . 
+    . . . f 1 1 d d d d f . . . . . 
+    . . . f 1 1 f f f f . . . . . . 
+    . . . . f 1 1 1 1 1 1 1 . . . . 
+    . . . . f c c c c c f 1 1 . . . 
+    . . . . f f f f f f f f 8 . . . 
+    . . . . f c f d d f c f 1 . . . 
+    . . . . f c f d d f c f 8 . . . 
+    . . . . . f f f f f f . . . . . 
+    `,img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . f f f f f . . . . . . 
+    . . . . f e e e e e f f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 1 . . . 
+    . . f 1 1 1 1 d d d d e f . . . 
+    . f 1 1 1 1 d d d d f d d f . . 
+    . f 1 1 1 1 d d d d d d d f . . 
+    . . f 1 1 1 d d d f f d f . . . 
+    . . . f 1 1 d d d f d f . . . . 
+    . . . f 1 1 d d d d f . . . . . 
+    . . . f 1 1 f f f f 1 1 . . . . 
+    . . f f f f c c c c 1 1 f f . . 
+    . . f d d f f f f f 8 f e e f . 
+    . . f d d f c c c 1 f e e f . . 
+    . . f f f f c c c f e e f . . . 
+    . . . . . f f f f f f f . . . . 
+    `];
+
 
 
     private _pharisee: Sprite = null
@@ -870,6 +940,15 @@ class Pharisee {
         )
     }
 
+    public walkRightAnimation(){
+        animation.runImageAnimation(
+        this._pharisee,
+        this.walkRight,
+        200,
+        true
+        )
+    }
+    
     public walkUpAnimation(){
         animation.runImageAnimation(
         this._pharisee,
