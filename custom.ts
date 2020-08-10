@@ -792,7 +792,7 @@ class Pharisee {
         animation.runImageAnimation(
         this._pharisee,
         this.walkdown,
-        125,
+        200,
         true
         )
     }
