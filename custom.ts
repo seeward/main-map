@@ -101,6 +101,9 @@ namespace DisciplePlayer {
             case AnimationTypes.WalkRight:
                 _pharisee.walkRightAnimation();
                 break
+            case AnimationTypes.WalkLeft:
+                _pharisee.walkLeftAnimation()
+                break
         }
     }
 
@@ -920,10 +923,10 @@ class Pharisee {
     private _pharisee: Sprite = null
 
         public constructor(k: number, x: number = 50, y: number = 50 ) {
-    //     this.walkLeft = this.getWalkRight().map(function(eachOne:Image){
-    //         let t = eachOne.flipX()
-    //     return t
-    // })
+        this.walkLeft = this.getWalkRight().map(function(eachOne:Image){
+        eachOne.flipX()
+        return eachOne
+    })
         this._pharisee = sprites.create(this.idle[0], k)
 
         this._pharisee.x = x;
@@ -965,7 +968,7 @@ class Pharisee {
         true
         )
     }
-public walkLeftAnimation(){
+    public walkLeftAnimation(){
         animation.runImageAnimation(
         this._pharisee,
         this.walkLeft,
