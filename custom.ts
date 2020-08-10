@@ -61,6 +61,7 @@ enum AnimationTypes {
 namespace DisciplePlayer {
     
     let _disciple : Disciple = null;
+    let _pharisee : Pharisee = null;
     
     //% blockId=playerCreate block="sprite of kind %k=spritekind || at x %x y %y of %c"
     //% expandableArgumentMode=enabled
@@ -72,6 +73,17 @@ namespace DisciplePlayer {
        return _disciple
     }
     
+
+    //% blockId=phariseeCreate block="sprite of kind %k=spritekind || at x %x y %y"
+    //% expandableArgumentMode=enabled
+    //% inlineInputMode=inline
+    //% blockSetVariable=pharisee
+    //% weight=100
+    export function createPharisee(k: number, x: number = 25, y: number = 25): Pharisee {
+       _pharisee = new Pharisee(k,x,y);
+       return _pharisee
+    }
+
 
     //% blockId=changeColor block="Change Clothes to $c and Hair to $h"
     export function changeColors(c:_colors, h: _colors) {
@@ -582,4 +594,122 @@ class Disciple {
     get sprite(): Sprite {
         return this._player;
     }
+}
+
+
+//% blockNamespace=DisciplePlayer
+class Pharisee {
+
+    private idle:Image[] = [img`
+    . . . . . f f f f f f . . . . . 
+    . f f . f e e e e e e f . . . . 
+    f d d f 1 1 1 1 1 1 1 1 f . . . 
+    f d d f e e d d d d e e 1 f . . 
+    . f f 1 e d f d d f d e 1 f . . 
+    . c c 1 e d d d f d d e 1 f . . 
+    . c c 1 e d d f f d d e 1 f . . 
+    . c 1 1 e e e d d e e e 1 1 f . 
+    . f 1 1 f f e e e e f f 1 1 f . 
+    . f 1 1 f c f f f f c f 1 d d f 
+    . f 8 8 f c c c c c c f 8 d d f 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f 8 8 f f f f f f f f 8 8 f . 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f f f f c c f f c c f f f f . 
+    . f f f f c f . . f c f f f f . 
+    `,img`
+    . . . . . f f f f f f . . . . . 
+    . . . . f e e e e e e f . . . . 
+    . f f . 1 1 1 1 1 1 1 1 f . . . 
+    f d d f e e d d d d e e 1 f . . 
+    f d d f e d f d d f d e 1 f . . 
+    . f f 1 e d d d f d d e 1 f . . 
+    . c c 1 e d d f f d d e 1 f . . 
+    . c 1 1 e e e d d e e e 1 1 f . 
+    . f 1 1 f f e e e e f f 1 1 f . 
+    . f 1 1 f c f f f f c f 1 1 f . 
+    . f 8 8 f c c c c c c f 8 d d f 
+    . f 1 1 f c c c c c c f 1 d d f 
+    . f 8 8 f f f f f f f f 8 8 f . 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f f f f c c f f c c f f f f . 
+    . f f f f c f . . f c f f f f . 
+    `,img`
+    . . . . . f f f f f f . . . . . 
+    . . . . f e e e e e e f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . f f 1 e e d d d d e e 1 f . . 
+    f d d f e d f d d f d e 1 f . . 
+    f d d f e d d d f d d e 1 f . . 
+    . f f 1 e d d f f d d e 1 f . . 
+    . c 1 1 e e e d d e e e 1 1 f . 
+    . f 1 1 f f e e e e f f 1 1 f . 
+    . f 1 1 f c f f f f c f 1 d d f 
+    . f 8 8 f c c c c c c f 8 d d f 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f 8 8 f f f f f f f f 8 8 f . 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f f f f c c f f c c f f f f . 
+    . f f f f c f . . f c f f f f . 
+    `,img`
+    . . . . . f f f f f f . . . . . 
+    . f f . f e e e e e e f . . . . 
+    f d d f 1 1 1 1 1 1 1 1 f . . . 
+    f d d f e e d d d d e e 1 f . . 
+    . f f 1 e d f d d f d e 1 f . . 
+    . c c 1 e d d d f d d e 1 f . . 
+    . c c 1 e d d f f d d e 1 f . . 
+    . c 1 1 e e e d d e e e 1 1 f . 
+    . f 1 1 f f e e e e f f 1 1 f . 
+    . f 1 1 f c f f f f c f 1 1 f . 
+    . f 8 8 f c c c c c c f 8 d d f 
+    . f 1 1 f c c c c c c f 1 d d f 
+    . f 8 8 f f f f f f f f 8 8 f . 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f f f f c c f f c c f f f f . 
+    . f f f f c f . . f c f f f f . 
+    `,img`
+    . f f . . f f f f f f . . . . . 
+    f d d f f e e e e e e f . . . . 
+    f d d f 1 1 1 1 1 1 1 1 f . . . 
+    . f f 1 e e d d d d e e 1 f . . 
+    . c c 1 e d f d d f d e 1 f . . 
+    . c 1 1 e d d d f d d e 1 f . . 
+    . c 1 1 e d d f f d d e 1 f . . 
+    . c 1 1 e e e d d e e e 1 1 f . 
+    . f 1 1 f f e e e e f f 1 1 f . 
+    . f 1 1 f c f f f f c f 1 d d f 
+    . f 8 8 f c c c c c c f 8 d d f 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f 8 8 f f f f f f f f 8 8 f . 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f f f f c c f f c c f f f f . 
+    . f f f f c f . . f c f f f f . 
+    `];
+
+    private _pharisee: Sprite = null
+
+        public constructor(k: number, x: number = 50, y: number = 50 ) {
+         
+        this._pharisee = sprites.create(this.idle[0], k)
+
+        this._pharisee.x = x;
+        this._pharisee.y = y;
+    }
+
+        public idleAnimation(){
+        animation.runImageAnimation(
+        this._pharisee,
+        this.idle,
+        100,
+        true
+        )
+    }
+
+      //% blockId=phariseeSprite block="%Pharisee(pharisee) sprite"
+    //% weight=8
+    get sprite(): Sprite {
+        return this._pharisee;
+    }
+
 }
