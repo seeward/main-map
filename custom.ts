@@ -83,7 +83,7 @@ namespace DisciplePlayer {
        _pharisee = new Pharisee(k,x,y);
        return _pharisee
     }
-    //% blockId=DiscipleAnimations block="Disciple Play %a Animation"
+    //% blockId=PhariseeAnimations block="Pharisee Play %a Animation"
     //% a.shadow=animationTypes
     export function playAnimationPharisee(s: AnimationTypes) {
         animation.stopAnimation(animation.AnimationTypes.All, _disciple.sprite)
