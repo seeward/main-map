@@ -95,6 +95,9 @@ namespace DisciplePlayer {
              case AnimationTypes.WalkDown:
                 _pharisee.walkDownAnimation();
                 break
+            case AnimationTypes.WalkUp:
+                _pharisee.walkUpAnimation();
+                break
         }
     }
 
@@ -768,6 +771,76 @@ class Pharisee {
     . f f f f c c f f c c f f f f . 
     . . . . f f f f f f f f . . . . 
     `];
+    private walkUp:Image[] = [img`
+    . . . . . f f f f f f . . . . . 
+    . . . . f e e e e e e f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . f 1 1 e e e e e e e e 1 1 f . 
+    . f f f f f e e e e f f f f f . 
+    . f f c c c f f f f c c c f f . 
+    . f f c c c c c c c c c c f f . 
+    . f f c c c c c c c c c c f f . 
+    . f 8 8 f f f f f f f f 8 8 f . 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f f f f c c c c c c f f f f . 
+    . . . . f f f f f f f f . . . . 
+    `,img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . f f f f f f . . . . . 
+    . . . . f e e e e e e f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . f 1 1 1 1 1 1 1 1 1 1 1 1 f . 
+    . f f 1 e e e e e e e e 1 f f . 
+    . f f c c c f f f f c c f f f f 
+    . f f c c c c c c c c c f d d f 
+    . f f c c c c c c c c c f d d f 
+    . f 8 8 f f f f f f f f f f f f 
+    . f 1 1 f f f f c c c f 1 1 f . 
+    . f f f f . . . c c c f f f f . 
+    . . . . . . . . f f f f . . . . 
+    `,img`
+    . . . . . f f f f f f . . . . . 
+    . . . . f e e e e e e f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . f 1 1 e e e e e e e e 1 1 f . 
+    . f f f f f e e e e f f f f f . 
+    . f f c c c f f f f c c c f f . 
+    . f f c c c c c c c c c c f f . 
+    . f f c c c c c c c c c c f f . 
+    . f 8 8 f f f f f f f f 8 8 f . 
+    . f 1 1 f c c c c c c f 1 1 f . 
+    . f f f f c c c c c c f f f f . 
+    . . . . f f f f f f f f . . . . 
+    `,img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . f f f f f f . . . . . 
+    . . . . f e e e e e e f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . f 1 1 1 1 1 1 1 1 1 1 1 1 f . 
+    . f f 1 e e e e e e e e 1 f f . 
+    f f f f f f e e e e f f f f f . 
+    f d d f c c f f f f c c c f f . 
+    f d d f c c c c c c c c c f f . 
+    f f f f f f f f f f f f 8 8 f . 
+    . f 1 1 f c c c f f f f 1 1 f . 
+    . f f f f c c c . . . f f f f . 
+    . . . . f f f f . . . . . . . . 
+    `];
+
 
     private _pharisee: Sprite = null
 
@@ -792,6 +865,15 @@ class Pharisee {
         animation.runImageAnimation(
         this._pharisee,
         this.walkdown,
+        200,
+        true
+        )
+    }
+
+    public walkUpAnimation(){
+        animation.runImageAnimation(
+        this._pharisee,
+        this.walkUp,
         200,
         true
         )
