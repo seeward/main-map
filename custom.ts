@@ -86,7 +86,7 @@ namespace DisciplePlayer {
     //% blockId=PhariseeAnimations block="Pharisee Play %a Animation"
     //% a.shadow=animationTypes
     export function playAnimationPharisee(s: AnimationTypes) {
-        animation.stopAnimation(animation.AnimationTypes.All, _disciple.sprite)
+        animation.stopAnimation(animation.AnimationTypes.All, _pharisee.sprite)
  
         switch (s) {
             case AnimationTypes.Idle:
@@ -716,7 +716,7 @@ class Pharisee {
         )
     }
 
-      //% blockId=phariseeSprite block="%Pharisee(pharisee) sprite"
+    //% blockId=phariseeSprite block="%Pharisee(pharisee) sprite"
     //% weight=8
     get sprite(): Sprite {
         return this._pharisee;
